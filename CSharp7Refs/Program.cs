@@ -6,7 +6,16 @@ namespace CSharp7Refs
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            RefReturns refReturns = new RefReturns();
+
+            ref int grade = ref refReturns.DoStuff();
+
+            grade = 17;
+
+            refReturns.PrintGrade();
+
+
+            RefLocals.PrintPoints();
         }
     }
 }
